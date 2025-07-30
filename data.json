@@ -1,11 +1,11 @@
 {
   "opentest": true,
-  "message": "Chào mừng bạn! App đang mở thử nghiệm.\nKHÔNG CẦN VƯỢT LINK.\nBản 2.2 Có Thêm Chức Năng Nuôi Tài Khoản giảm hành động like, share, đăng lại xuống thấp hơn. Để sử dụng ổn bạn phải bật được buộc dừng trong cài đặt.\nđăng nhập ổn định hơn\nTự Đổi acc khi bị đăng xuất\nĐăng Nhập Golike Bằng Token\nMáy Nào không dùng được buộc dừng anh em vào cài đặt bỏ tích vào Buộc Dừng rồi bấm lưu Nhé.\nCó Lỗi hãy quay video gửi zalo 0396785304",
+  "message": "Chào các bảo bối !, app hiện tại đang là phiên bản 2.4 chúc anh em có những trải nghiệm tốt đẹp <3",
   "force_update": true,
   "update_url": "https://drive.google.com/file/d/1z5gskISqngtZfciK7FUR7NXZtjSxymB-/view?usp=sharing",
   "motd": "Bạn đang dùng bản DEMO, một số chức năng sẽ bị giới hạn.",
   "notice": "Nếu có lỗi hãy liên hệ Telegram: @hdxhotrovn, fb: fb.com/hdxtool",
   "status": "DEMO",
   "versionName": "2.4",
-  "message_uodate": "Cập Nhập Bản Mới\nKHÔNG CẦN VƯỢT LINK.\nCó Thêm Chức Năng Nuôi Tài Khoản giảm hành động like, share, đăng lại xuống thấp hơn. Để sử dụng ổn bạn phải bật được buộc dừng trong cài đặt.\nNăng đăng nhập ổn định hơn\nTự Đổi acc khi bị đăng xuất\nĐăng Nhập Golike Bằng authorization\nMáy Nào không dùng được buộc dừng anh em vào cài đặt bỏ tích vào Buộc Dừng rồi bấm lưu Nhé.\nCó Lỗi hãy quay video gửi zalo 0396785304"
+  "message_uodate": "Công cụ giúp anh em tự động hóa công việc làm mmo trên điện thoại không cần adb, cài python phức tạp vì đã tích hợp ngay trong app, nếu có lỗi hãy liên hệ Telegram: @hdxhotrovn, fb: fb.com/hdxtool"
 }
