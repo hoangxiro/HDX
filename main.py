@@ -9,7 +9,7 @@ from datetime import datetime, timezone, timedelta
 import sqlite3
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN_BOT = "7706201842:AAGxoUs9KUoPp2oA3qpDxoFnCqCHgt1RkSU"
+TOKEN_BOT = "7399394702:AAFUh3oB6P1MYqoXmySJY2OqjiAVUYUsAWA"
 TOKEN_YEUMONEY = "b926b7fc397affdd8de5be08b14ba3a3cf00dc6c7df19202c1e1d096a6d4264b"
 API_KEY_PREFIX = "https://hoangdaixu.x10.bz/laykey.php?key="
 API_KEY_VERIFY = "https://yeumoney.com/QL_api.php"
@@ -93,6 +93,7 @@ def private_chat_only(func):
         else:
             bot.reply_to(message, "❌ Lệnh này chỉ hoạt động trong một nhóm chat cụ thể.")
     return wrapper
+
 
 @bot.message_handler(commands=['thamgiaapp'])
 @private_chat_only
