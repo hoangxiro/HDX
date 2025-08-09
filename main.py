@@ -85,7 +85,7 @@ def get_user_icon(username: str):
     return icon
 
 TARGET_CHAT_ID = -1002893907510
-
+init_db()
 def private_chat_only(func):
     def wrapper(message):
         if message.chat.id == TARGET_CHAT_ID:
@@ -249,18 +249,18 @@ keep_alive()
 
 # Vòng lặp giữ bot luôn chạy
 while True:
-  try:
-    bot.infinity_polling()
-  except Exception as e:
-    error_msg = traceback.format_exc()
-    print("Bot bị lỗi nè:\n", error_msg)
-
-    # Gửi log về Telegram
     try:
-      bot.send_message(ADMIN_ID,
-                       f"⚠️ Bot bị lỗi:\n\n<pre>{error_msg}</pre>",
-                       parse_mode="HTML")
-    except:
-      pass
+        bot.infinity_polling()
+    except Exception as e:
+        error_msg = traceback.format_exc()
+        print("Bot bị lỗi nè:\n", error_msg)
 
-    time.sleep(0.1)  # Đợi 0s rồi thử chạy lại
+        # Gửi log về Telegram
+        try:
+            bot.send_message(ADMIN_ID,
+                             f"⚠️ Bot bị lỗi:\n\n<pre>{error_msg}</pre>",
+                             parse_mode="HTML")
+        except:
+            pass
+
+        time.sleep(0.1)  # Đợi 0s rồi thử chạy lại
