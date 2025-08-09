@@ -10,9 +10,9 @@ import sqlite3
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 TOKEN_BOT = "7399394702:AAFUh3oB6P1MYqoXmySJY2OqjiAVUYUsAWA"
-TOKEN_YEUMONEY = "68976b9a2f41060b08016381"
+TOKEN_YEUMONEY = "b926b7fc397affdd8de5be08b14ba3a3cf00dc6c7df19202c1e1d096a6d4264b"
 API_KEY_PREFIX = "https://hoangdaixu.x10.bz/laykey.php?key="
-API_KEY_VERIFY = "https://link4m.co/api-shorten/v2?api="
+API_KEY_VERIFY = "https://yeumoney.com/QL_api.php"
 API_CREATE_USER = "https://hoangdaixu.x10.bz/app.php?thaotac=taotaikhoan"
 SECRET = "Hoangdaixuuu_98"
 DB_PATH = 'botdata.db'
@@ -85,7 +85,7 @@ def get_user_icon(username: str):
     return icon
 
 TARGET_CHAT_ID = -1002893907510
-init_db()
+
 def private_chat_only(func):
     def wrapper(message):
         if message.chat.id == TARGET_CHAT_ID:
@@ -93,7 +93,6 @@ def private_chat_only(func):
         else:
             bot.reply_to(message, "❌ Lệnh này chỉ hoạt động trong một nhóm chat cụ thể.")
     return wrapper
-
 
 @bot.message_handler(commands=['thamgiaapp'])
 @private_chat_only
@@ -116,7 +115,7 @@ def laykey_handler(message):
     # Invalidate the old key
     active_keys.pop(user_id, None)
 
-    url_api = f"{API_KEY_VERIFY}?token={TOKEN_YEUMONEY}&url={API_KEY_PREFIX}{key}"
+    url_api = f"{API_KEY_VERIFY}?token={TOKEN_YEUMONEY}&format=json&url={API_KEY_PREFIX}{key}"
 
     try:
         r = requests.get(url_api, timeout=10)
@@ -150,6 +149,8 @@ def laykey_handler(message):
             bot.reply_to(message, f"❌ Lỗi kết nối API lấy link: HTTP {r.status_code}")
     except Exception as e:
         bot.reply_to(message, f"❌ Lỗi gọi API lấy link: {str(e)}")
+
+
 
 @bot.message_handler(commands=['key'])
 @private_chat_only
